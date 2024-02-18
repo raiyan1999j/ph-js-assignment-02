@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tailwind-css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisy-ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- fontAwesome -->
+    <script src="https://kit.fontawesome.com/f1458b3047.js" crossorigin="anonymous"></script>
+    <!-- google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- tailwind-config -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily:{
+                'raleway':['Raleway', 'sans-serif']
+              },
+              backgroundImage:{
+                'bannerImage':"url('./image/banner.png')"
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="max-w-[1440px] mx-auto font-raleway">
+    <!-- headerArea-start -->
+    <header>
+        <div class="navbar bg-base-100 top-0 w-[1173px] mx-auto">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a>Item 1</a></li>
+                  <li>
+                    <a>Parent</a>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Item 3</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost capitalize text-4xl font-extrabold">p-ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 capitalize text-lg font-medium">
+                <li>
+                    <a href="#">home</a>
+                </li>
+                <li>
+                  <a href="#">about</a>
+                </li>
+                <li>
+                    <a>destination</a>
+                </li>
+                <li>
+                    <a href="#">search</a>
+                </li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn text-xl font-bold capitalize bg-[#1dd1001a] border border-[#1dd1001a] text-[#1DD100]">
+                bus 
+                <img src="./image/bus-icon.png" alt="bus" class="ml-3">
+              </a>
+            </div>
+          </div>
+          <!-- bannerArea-start -->
+          <div class="bg-bannerImage w-[1171px] mx-auto mt-[30px]">
+            <div class="w-[742px] mx-auto text-center text-white pt-[70px] pb-[135px]">
+              <h1 class="capitalize text-[64px] font-extrabold leading-[86px]">
+                end-to-end travel with <span class="text-[#1DD100]">p paribahan</span>
+              </h1>
+              <p class="w-[691px] pt-4 pb-8">
+                Efficient, safe, and reliable transport connecting communities. Your comfort, our priority. Welcome aboard!
+              </p>
+              <button class="text-xl font-bold capitalize leading-[23px] text-[#030712] bg-[#1DD100] rounded-xl py-[21px] px-[30px]">
+                buy ticket
+              </button>
+            </div>
+          </div>
+          <!-- bannerArea-finish -->
+          <!-- bannerCardArea-start -->
+          <div class="w-[1171px] mx-auto">
+            <div class="flex flex-row justify-evenly translate-y-[-82px]">
+              <div class="w-[308px] flex flex-row bg-white rounded-xl py-8 px-8 border-b-[#1DD100] border-t-0 border-r-0 border-l-0 border-[3px]">
+                <div class="h-16 w-16 mr-4">
+                  <img src="./image/people.png" alt="people" class="h-full w-full object-cover">
+                </div>
+                <div>
+                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-sans mb-2">
+                    500k+
+                  </h3>
+                  <p class="text-[#03071299] text-lg font-normal capitalize">
+                    registered users
+                  </p>
+                </div>
+              </div>
+              <div class="w-[308px] flex flex-row bg-white rounded-xl py-8 px-8 border-b-[#1DD100] border-t-0 border-r-0 border-l-0 border-[3px]">
+                <div class="h-16 w-16 mr-4">
+                  <img src="./image/ticket-cupon.png" alt="ticket" class="h-full w-full object-cover">
+                </div>
+                <div>
+                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-sans mb-2">
+                    1.7 lacks
+                  </h3>
+                  <p class="text-[#03071299] text-lg font-normal capitalize">
+                    ticket sold
+                  </p>
+                </div>
+              </div>
+              <div class="w-[308px] flex flex-row bg-white rounded-xl py-8 px-8 border-b-[#1DD100] border-t-0 border-r-0 border-l-0 border-[3px]">
+                <div class="h-16 w-16 mr-4">
+                  <img src="./image/stoppage.png" alt="stoppage" class="h-full w-full object-cover">
+                </div>
+                <div>
+                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-sans mb-2">
+                    80k+
+                  </h3>
+                  <p class="text-[#03071299] text-lg font-normal capitalize">
+                    rental partners
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- bannerCardArea-finish -->
+    </header>
+    <!-- headerArea-finish -->
+    <!-- mainArea-start -->
+    <!-- mainArea-finish -->
+    <!-- footerArea-start -->
+    <!-- footerArea-finish -->
+</body>
+</html>
