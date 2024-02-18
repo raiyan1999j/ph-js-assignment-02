@@ -14,13 +14,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <!-- tailwind-config -->
     <script>
         tailwind.config = {
           theme: {
             extend: {
               fontFamily:{
-                'raleway':['Raleway', 'sans-serif']
+                'raleway':['Raleway', 'sans-serif'],
+                'inter':['Inter','sans-serif']
               },
               backgroundImage:{
                 'bannerImage':"url('./image/banner.png')"
@@ -99,7 +103,7 @@
                   <img src="./image/people.png" alt="people" class="h-full w-full object-cover">
                 </div>
                 <div>
-                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-sans mb-2">
+                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-inter mb-2">
                     500k+
                   </h3>
                   <p class="text-[#03071299] text-lg font-normal capitalize">
@@ -112,7 +116,7 @@
                   <img src="./image/ticket-cupon.png" alt="ticket" class="h-full w-full object-cover">
                 </div>
                 <div>
-                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-sans mb-2">
+                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-inter mb-2">
                     1.7 lacks
                   </h3>
                   <p class="text-[#03071299] text-lg font-normal capitalize">
@@ -125,7 +129,7 @@
                   <img src="./image/stoppage.png" alt="stoppage" class="h-full w-full object-cover">
                 </div>
                 <div>
-                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-sans mb-2">
+                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-inter mb-2">
                     80k+
                   </h3>
                   <p class="text-[#03071299] text-lg font-normal capitalize">
@@ -139,6 +143,60 @@
     </header>
     <!-- headerArea-finish -->
     <!-- mainArea-start -->
+    <main>
+      <!-- offerArea-start -->
+      <section class="mt-[120px]">
+        <div class="w-[1171px] mx-auto text-center mb-12">
+          <h2 class="text-[40px] font-bold capitalize text-[#030712]">best offers for you</h2>
+        </div>
+        <div class="w-[1171px] mx-auto">
+          <div class="grid grid-cols-2 gap-x-6">
+            <div class="w-[573px] flex flex-row bg-[#FFBF0F] py-[52px] rounded-xl">
+              <div class="w-[343px] relative pl-[51px] before:absolute before:h-[50px] before:w-[50px] before:bg-white before:rounded-full before:right-[-22px] before:top-[-78%] after:absolute after:h-[50px] after:w-[50px] after:bg-white after:rounded-full after:right-[-22px] after:bottom-[-78px]">
+                <div class="absolute h-[126px] w-[1px] border-dashed border-white border-[1px] top-[-15px] right-0"></div>
+                <h2 class="text-4xl font-black leading-[36px] text-[#030712cc] font-inter uppercase">
+                  15% off
+                </h2>
+                <h3 class="text-lg font-medium text-[#030712cc] font-inter leading-[36px]">
+                  on you next purchase
+                </h3>
+                <p class="text-lg font-medium text-[#03071280] font-inter">
+                  use by january 2024
+                </p>
+              </div>
+              <div class="w-[229px] pl-[49px]">
+                <h2 class="font-raleway font-semibold text-[#030712] text-4xl uppercase">new 15</h2>
+                <p class="text-[#03071266] font-medium capitalize mt-3">coupon code</p>
+              </div>
+            </div>
+            <div class="w-[573px] flex flex-row bg-[#F78C9C] py-[52px] rounded-xl">
+              <div class="w-[343px] relative pl-[51px] before:absolute before:h-[50px] before:w-[50px] before:bg-white before:rounded-full before:right-[-22px] before:top-[-78%] after:absolute after:h-[50px] after:w-[50px] after:bg-white after:rounded-full after:right-[-22px] after:bottom-[-78px]">
+                <div class="absolute h-[126px] w-[1px] border-dashed border-white border-[1px] top-[-15px] right-0"></div>
+                <h2 class="text-4xl font-black leading-[36px] text-[#030712cc] font-inter uppercase">
+                  20% off
+                </h2>
+                <h3 class="text-lg font-medium text-[#030712cc] font-inter leading-[36px]">
+                  on you next purchase
+                </h3>
+                <p class="text-lg font-medium text-[#03071280] font-inter">
+                  use by january 2024
+                </p>
+              </div>
+              <div class="w-[229px] pl-[43px]">
+                <h2 class="font-inter font-black text-[#030712] text-3xl capitalize">couple 20</h2>
+                <p class="text-[#03071266] font-medium capitalize mt-3">coupon code</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-[1171px] mx-auto mt-[62px] text-center">
+          <button class="border border-[#1DD100] text-[#1DD100] capitalize text-xl font-bold py-[21px] px-[30px] rounded-xl">
+            see all offers
+          </button>
+        </div>
+      </section>
+      <!-- offerArea-finish -->
+    </main>
     <!-- mainArea-finish -->
     <!-- footerArea-start -->
     <!-- footerArea-finish -->
