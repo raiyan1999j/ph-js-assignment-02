@@ -288,8 +288,17 @@
         </div>
         <!-- ticketArea-finish -->
         <!-- selectionArea-start -->
-        <div class="w-[1171px] mx-auto mt-[26.19px] bg-white">
-          <div class="grid grid-cols-[671px_497px]">
+        <div class="w-[1171px] mx-auto mt-[26.19px] relative bg-white">
+          <div class="absolute h-full w-[57%] bg-black/20 top-[260px] left-0 hidden" id="seatAlert">
+            <div class="absolute top-[171px] left-[90px] h-full w-full">
+              <div class="h-[300px] w-[500px] rounded-xl absolute bg-lime-400 border-white border-2 flex justify-center items-center z-10">
+                <h2 class="capitalize text-red-600 font-bold">
+                  can not select more than 4 seat!
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-[671px_497px] -z-10">
             <div class="py-8 pl-8 pr-8 relative border-r-[#0307124d] after:h-[95%] after:w-[2px] after:border after:border-[#0307124d] after:border-dashed after:table after:content-'' after:absolute after:top-[36px] after:right-0">
               <h2 class="text-[#030712] text-2xl font-semibold leading-7 capitalize border-2 border-b-[#03071233] border-t-0 border-r-0 border-l-0 pb-[23.5px] border-dashed">
                 select your seat
