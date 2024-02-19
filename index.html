@@ -226,7 +226,7 @@
               <div>
                 <button class="flex flex-row font-inter text-lg font-medium text-[#1DD100] capitalize bg-[#1dd10026] p-[17px] rounded-xl">
                   <img src="./image/seat-green-filled.png" alt="seat" class="w-[28px] mr-2">
-                  40 seats left
+                  <span id="remainSeat">40</span> seats left
                 </button>
               </div>
             </div>
@@ -318,18 +318,18 @@
                   <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">a</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
                     a1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
                     a2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
                     a3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
                     a4
                   </div>
                 </div>
@@ -337,198 +337,198 @@
               <!-- b-series -->
               <div class="flex flex-row w-full mt-6">
                 <div class="flex justify-center items-center">
-                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">a</h3>
+                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">b</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8">
-                    a1
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                    b1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a2
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    b2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter">
-                    a3
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                    b3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a4
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    b4
                   </div>
                 </div>
               </div>
               <!-- c-series -->
               <div class="flex flex-row w-full mt-6">
                 <div class="flex justify-center items-center">
-                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">a</h3>
+                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">c</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8">
-                    a1
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                    c1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a2
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    c2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter">
-                    a3
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                    c3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a4
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    c4
                   </div>
                 </div>
               </div>
               <!-- d-series -->
               <div class="flex flex-row w-full mt-6">
                 <div class="flex justify-center items-center">
-                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">a</h3>
+                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">d</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8">
-                    a1
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                    d1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a2
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    d2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter">
-                    a3
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                    d3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a4
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    d4
                   </div>
                 </div>
               </div>
               <!-- e-series -->
               <div class="flex flex-row w-full mt-6">
                 <div class="flex justify-center items-center">
-                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">a</h3>
+                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">e</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8">
-                    a1
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                    e1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a2
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    e2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter">
-                    a3
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                    e3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a4
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    e4
                   </div>
                 </div>
               </div>
               <!-- f-series -->
               <div class="flex flex-row w-full mt-6">
                 <div class="flex justify-center items-center">
-                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">a</h3>
+                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">f</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8">
-                    a1
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                    f1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a2
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    f2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter">
-                    a3
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                    f3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a4
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    f4
                   </div>
                 </div>
               </div>
               <!-- g-series -->
               <div class="flex flex-row w-full mt-6">
                 <div class="flex justify-center items-center">
-                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">a</h3>
+                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">g</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8">
-                    a1
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                    g1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a2
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    g2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter">
-                    a3
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                    g3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a4
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    g4
                   </div>
                 </div>
               </div>
               <!-- h-series -->
               <div class="flex flex-row w-full mt-6">
                 <div class="flex justify-center items-center">
-                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">a</h3>
+                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">h</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8">
-                    a1
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                    h1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a2
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    h2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter">
-                    a3
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                    h3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a4
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    h4
                   </div>
                 </div>
               </div>
               <!-- i-series -->
               <div class="flex flex-row w-full mt-6">
                 <div class="flex justify-center items-center">
-                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">a</h3>
+                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">i</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8">
-                    a1
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                    i1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a2
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat ">
+                    i2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter">
-                    a3
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                    i3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a4
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    i4
                   </div>
                 </div>
               </div>
               <!-- j-series -->
               <div class="flex flex-row w-full mt-6">
                 <div class="flex justify-center items-center">
-                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">a</h3>
+                  <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">j</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8">
-                    a1
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                    j1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a2
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    j2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter">
-                    a3
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                    j3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter">
-                    a4
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                    j4
                   </div>
                 </div>
               </div>
@@ -662,5 +662,8 @@
       </section>
     </footer>
     <!-- footerArea-finish -->
+
+    <!-- script-file -->
+    <script src="./script/script.js"></script>
 </body>
 </html>
