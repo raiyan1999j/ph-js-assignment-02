@@ -19,6 +19,7 @@ const nextBtn = document.getElementById('nextBtn');
 const congratulation = document.getElementById('congratulation');
 const continueBtn = document.getElementById('continueBtn');
 const seatCount = document.getElementById('seatCount');
+const discountAmount = document.getElementById('discountAmount');
 
 customerInfo.addEventListener('change',(event)=>{
     let [name,phone,mail] = "not match";
@@ -172,6 +173,7 @@ function totalSeatPrice(){
         seatTable.removeChild(seatTable.lastChild)
     }else{
         totalPrice.innerText = perPrice * totalTicket;
+        grandTotal.innerText = perPrice * totalTicket;
         seatCount.innerText = totalTicket;
     }
 
@@ -190,8 +192,9 @@ function grandTotalPrice(discountPrice){
     const discount = perPrice * discountPrice / 100;
     const afterDiscount = perPrice - discount;
     
-    grandSection.classList.remove('hidden');
-    grandTotal.innerText = afterDiscount * 4
+    discountAmount.classList.remove('hidden');
+    discountAmount.children[0].innerText = discount * 4 + 'taka';
+    grandTotal.innerText = afterDiscount * 4;
 }
 
 function warningMessage(section,msg){
