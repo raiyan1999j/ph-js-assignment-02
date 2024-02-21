@@ -15,9 +15,45 @@ const customerName = document.getElementById('customerName');
 const customerPhn = document.getElementById('customerPhn');
 const customerMail= document.getElementById('customerMail');
 const totalSeat = Number(document.getElementById('remainSeat').innerText);
+const nextBtn = document.getElementById('nextBtn');
 
-customerInfo.addEventListener('click',(event)=>{
-    console.dir(event);
+customerInfo.addEventListener('change',(event)=>{
+    let [name,phone,mail] = "not match";
+
+    if(customerName.value.length < 4){
+        warningMessage(customerName,'at least 4 character!')
+    }else{
+        name='match';
+    }
+
+    if(isNaN(Number(customerPhn.value))){
+        warningMessage(customerPhn,'input must be number')
+    }else if(customerPhn.value.split("").length !== 11){
+        warningMessage(customerPhn,'must have 11 digit')
+    }else{
+        phone='match';
+    }
+
+    if(!customerMail.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    )){
+        warningMessage(customerMail,'input must be email')
+    }else{
+        mail='match';
+    }
+
+    if(name == 'match' && phone == 'match' && mail == 'match'){
+        nextBtn.classList.remove('opacity-30');
+        nextBtn.classList.add('hover:cursor-pointer');
+        nextBtn.removeAttribute('disabled')
+    }else{
+        nextBtn.classList.add('opacity-30');
+        nextBtn.classList.remove('hover:cursor-not-allowed');
+        nextBtn.setAttribute('disabled','');
+    }
+})
+
+nextBtn.addEventListener('click',(event)=>{
+    console.log(event);
 })
 
 couponBtn.addEventListener('click',(event)=>{
@@ -139,4 +175,14 @@ function grandTotalPrice(discountPrice){
     
     grandSection.classList.remove('hidden');
     grandTotal.innerText = afterDiscount * 4
+}
+
+function warningMessage(section,msg){
+    section.classList.add('text-red-500','font-medium');
+    section.value = `${msg}`;
+
+    setTimeout(()=>{
+        section.classList.remove('text-red-500','font-medium');
+        section. value =''
+    },1000)
 }
