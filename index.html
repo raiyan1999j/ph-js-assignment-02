@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +28,9 @@
               },
               backgroundImage:{
                 'bannerImage':"url('./image/banner.png')"
+              },
+              screens:{
+                'small':{'min':'0px','max':'640px'}
               }
             }
           }
@@ -37,25 +40,34 @@
 <body class="max-w-[1440px] mx-auto font-raleway">
     <!-- headerArea-start -->
     <header>
-        <div class="navbar bg-base-100 top-0 w-[1173px] mx-auto">
-            <div class="navbar-start">
+        <div class="navbar bg-base-100 top-0 w-[1173px] mx-auto small:w-[521.33px fixed z-20 translate-x-[133px] small:translate-x-0">
+            <div class="navbar-start small:justify-center">
               <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Item 1</a></li>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 capitalize text-lg font-medium">
                   <li>
-                    <a>Parent</a>
-                    <ul class="p-2">
-                      <li><a>Submenu 1</a></li>
-                      <li><a>Submenu 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a>Item 3</a></li>
+                    <a href="#">home</a>
+                </li>
+                <li>
+                  <a href="#">about</a>
+                </li>
+                <li>
+                    <a>destination</a>
+                </li>
+                <li>
+                    <a href="#">search</a>
+                </li>
                 </ul>
               </div>
               <a class="btn btn-ghost capitalize text-4xl font-extrabold">p-ticket</a>
+              <div class="hidden small:block">
+                <a class="btn text-xl font-bold capitalize bg-[#1dd1001a] border border-[#1dd1001a] text-[#1DD100]">
+                  bus 
+                  <img src="./image/bus-icon.png" alt="bus" class="ml-3">
+                </a>
+              </div>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1 capitalize text-lg font-medium">
@@ -81,58 +93,58 @@
             </div>
           </div>
           <!-- bannerArea-start -->
-          <div class="bg-bannerImage w-[1171px] mx-auto mt-[30px]">
-            <div class="w-[742px] mx-auto text-center text-white pt-[70px] pb-[135px]">
-              <h1 class="capitalize text-[64px] font-extrabold leading-[86px]">
+          <div class="bg-bannerImage w-[1171px] mx-auto mt-[30px] small:w-[520.44px] small:rounded-[50px] small:mt-[100px]">
+            <div class="w-[742px] mx-auto text-center text-white pt-[70px] pb-[135px] small:w-[329.78px] small:flex small:flex-col">
+              <h1 class="capitalize text-[64px] font-extrabold leading-[86px] small:leading-[38px] small:text-[27px]">
                 end-to-end travel with <span class="text-[#1DD100]">p paribahan</span>
               </h1>
-              <p class="w-[691px] pt-4 pb-8">
+              <p class="w-[691px] pt-4 pb-8 small:w-[350px]">
                 Efficient, safe, and reliable transport connecting communities. Your comfort, our priority. Welcome aboard!
               </p>
-              <button class="text-xl font-bold capitalize leading-[23px] text-[#030712] bg-[#1DD100] rounded-xl py-[21px] px-[30px]">
+              <a class="text-xl font-bold capitalize leading-[23px] text-[#030712] bg-[#1DD100] rounded-xl py-[21px] px-[30px]" href="#serviceArea">
                 buy ticket
-              </button>
+              </a>
             </div>
           </div>
           <!-- bannerArea-finish -->
           <!-- bannerCardArea-start -->
-          <div class="w-[1171px] mx-auto">
+          <div class="w-[1171px] mx-auto small:w-[520.44px]">
             <div class="flex flex-row justify-evenly translate-y-[-82px]">
-              <div class="w-[308px] flex flex-row bg-white rounded-xl py-8 px-8 border-b-[#1DD100] border-t-0 border-r-0 border-l-0 border-[3px]">
-                <div class="h-16 w-16 mr-4">
+              <div class="w-[308px] flex flex-row bg-white rounded-xl py-8 px-8 border-b-[#1DD100] border-t-0 border-r-0 border-l-0 border-[3px] small:p-[10px] small:w-[150px] small:items-center small:flex-col">
+                <div class="h-16 w-16 mr-4 small:h-[35px] small:w-[35px]">
                   <img src="./image/people.png" alt="people" class="h-full w-full object-cover">
                 </div>
                 <div>
-                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-inter mb-2">
+                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-inter mb-2 small:text-[26px] small:leading-[28px] small:text-center small:pt-[8px]">
                     500k+
                   </h3>
-                  <p class="text-[#03071299] text-lg font-normal capitalize">
+                  <p class="text-[#03071299] text-lg font-normal capitalize small:text-[16px]">
                     registered users
                   </p>
                 </div>
               </div>
-              <div class="w-[308px] flex flex-row bg-white rounded-xl py-8 px-8 border-b-[#1DD100] border-t-0 border-r-0 border-l-0 border-[3px]">
-                <div class="h-16 w-16 mr-4">
+              <div class="w-[308px] flex flex-row bg-white rounded-xl py-8 px-8 border-b-[#1DD100] border-t-0 border-r-0 border-l-0 border-[3px] small:p-[10px] small:w-[150px] small:items-center small:flex-col">
+                <div class="h-16 w-16 mr-4 small:h-[35px] small:w-[35px]">
                   <img src="./image/ticket-cupon.png" alt="ticket" class="h-full w-full object-cover">
                 </div>
                 <div>
-                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-inter mb-2">
+                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-inter mb-2 small:text-[26px] small:leading-[28px] small:text-center small:pt-[8px]">
                     1.7 lacks
                   </h3>
-                  <p class="text-[#03071299] text-lg font-normal capitalize">
+                  <p class="text-[#03071299] text-lg font-normal capitalize small:text-[16px]">
                     ticket sold
                   </p>
                 </div>
               </div>
-              <div class="w-[308px] flex flex-row bg-white rounded-xl py-8 px-8 border-b-[#1DD100] border-t-0 border-r-0 border-l-0 border-[3px]">
-                <div class="h-16 w-16 mr-4">
+              <div class="w-[308px] flex flex-row bg-white rounded-xl py-8 px-8 border-b-[#1DD100] border-t-0 border-r-0 border-l-0 border-[3px] small:p-[10px] small:w-[150px] small:items-center small:flex-col">
+                <div class="h-16 w-16 mr-4 small:h-[35px] small:w-[35px]">
                   <img src="./image/stoppage.png" alt="stoppage" class="h-full w-full object-cover">
                 </div>
                 <div>
-                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-inter mb-2">
+                  <h3 class="text-[36px] font-bold leading-[44px] text-[#030712] font-inter mb-2 small:text-[26px] small:leading-[28px] small:text-center small:pt-[8px]">
                     80k+
                   </h3>
-                  <p class="text-[#03071299] text-lg font-normal capitalize">
+                  <p class="text-[#03071299] text-lg font-normal capitalize small:text-[16px]">
                     rental partners
                   </p>
                 </div>
@@ -146,11 +158,11 @@
     <main>
       <!-- offerArea-start -->
       <section class="mt-[120px]">
-        <div class="w-[1171px] mx-auto text-center mb-12">
+        <div class="w-[1171px] mx-auto text-center mb-12 small:w-[520.44px]">
           <h2 class="text-[40px] font-bold capitalize text-[#030712]">best offers for you</h2>
         </div>
-        <div class="w-[1171px] mx-auto">
-          <div class="grid grid-cols-2 gap-x-6">
+        <div class="w-[1171px] mx-auto small:w-[520.44px]">
+          <div class="grid grid-cols-2 gap-x-6 small:grid-cols-none small:gap-y-8 small:justify-center">
             <div class="w-[573px] flex flex-row bg-[#FFBF0F] py-[52px] rounded-xl">
               <div class="w-[343px] relative pl-[51px] before:absolute before:h-[50px] before:w-[50px] before:bg-white before:rounded-full before:right-[-22px] before:top-[-78%] after:absolute after:h-[50px] after:w-[50px] after:bg-white after:rounded-full after:right-[-22px] after:bottom-[-78px]">
                 <div class="absolute h-[126px] w-[1px] border-dashed border-white border-[1px] top-[-15px] right-0"></div>
@@ -189,7 +201,7 @@
             </div>
           </div>
         </div>
-        <div class="w-[1171px] mx-auto mt-[62px] text-center">
+        <div class="w-[1171px] mx-auto mt-[62px] text-center small:w-[520.44px]">
           <button class="border border-[#1DD100] text-[#1DD100] capitalize text-xl font-bold py-[21px] px-[30px] rounded-xl">
             see all offers
           </button>
@@ -197,37 +209,37 @@
       </section>
       <!-- offerArea-finish -->
       <!-- serviceArea-start -->
-      <section class="mt-[120px] border-b-0 border-r-0 border-l-0 border-[#1DD100] border-[2px] rounded-[70px] bg-gray-100">
-        <div class="w-[1171px] mx-auto flex justify-center items-center flex-col text-center mt-[120px] mb-[47.81px]">
+      <section class="mt-[120px] border-b-0 border-r-0 border-l-0 border-[#1DD100] border-[2px] rounded-[70px] bg-gray-100" id="serviceArea">
+        <div class="w-[1171px] mx-auto flex justify-center items-center flex-col text-center mt-[120px] mb-[47.81px] small:w-[520.44px]">
           <h2 class="text-[#030712] text-[40px] font-bold capitalize">
             p.h paribahan
           </h2>
-          <p class="w-[736px] text-[#03071299] font-inter text-lg font-normal leading-[30px] mt-6">
+          <p class="w-[736px] text-[#03071299] font-inter text-lg font-normal leading-[30px] mt-6 small:w-[540px]">
             Convenient schedules, courteous staff, and comfortable rides. Experience the best in public transportation with us!
           </p>
         </div>
         <!-- ticketArea-start -->
-        <div class="flex flex-row w-[1171px] mx-auto bg-white rounded-xl">
-          <div class="w-[915px] border-r-[#1DD100] border-[2px] border-dashed border-b-0 border-t-0 border-l-0 pl-8 pr-6 py-8 relative before:absolute before:h-[50px] before:w-[50px] before:rounded-full before:top-[-22px] before:right-[-25px] before:bg-white after:absolute after:h-[50px] after:w-[50px] after:rounded-full after:bottom-[-22px] after:right-[-25px] after:bg-white">
+        <div class="flex flex-row w-[1171px] mx-auto bg-white rounded-xl small:w-[520.44px] small:flex-col small:items-center">
+          <div class="w-[915px] border-r-[#1DD100] border-[2px] border-dashed border-b-0 border-t-0 border-l-0 pl-8 pr-6 py-8 relative before:absolute before:h-[50px] before:w-[50px] before:rounded-full before:top-[-22px] before:right-[-25px] before:bg-white after:absolute after:h-[50px] after:w-[50px] after:rounded-full after:bottom-[-22px] after:right-[-25px] after:bg-white small:w-full small:border-r-0 small:border-b-[#1DD100] small:border-b-[2px]">
             <div class="flex flex-row justify-between w-full">
-              <div class="flex flex-row">
+              <div class="flex flex-row small:items-center">
                 <div class="w-[68.57px] mr-[14px]">
                   <img src="./image/bus-logo.png" alt="bus">
                 </div>
                 <div>
-                  <h2 class="text-[32px] font-bold capitalize text-[#030712] leading-[38px]">
+                  <h2 class="text-[32px] font-bold capitalize text-[#030712] leading-[38px] small:text-[22px]">
                     greenline paribahan
                   </h2>
-                  <p class="text-lg font-normal leading-[22px] font-inter text-[#03071299] capitalize">
+                  <p class="text-lg font-normal leading-[22px] font-inter text-[#03071299] capitalize small:text-[14px]">
                     front-001-end ! AC_business
                   </p>
                 </div>
               </div>
               <div>
-                <button class="flex flex-row font-inter text-lg font-medium text-[#1DD100] capitalize bg-[#1dd10026] p-[17px] rounded-xl">
+                <div class="flex flex-row font-inter text-lg font-medium text-[#1DD100] capitalize bg-[#1dd10026] p-[17px] rounded-xl small:text-[14px] small:p-[10px]">
                   <img src="./image/seat-green-filled.png" alt="seat" class="w-[28px] mr-2">
-                  <span id="remainSeat">40</span> seats left
-                </button>
+                  <span id="remainSeat" class="pr-2">40</span> seats left
+                </div>
               </div>
             </div>
             <div class="flex flex-row justify-between border-b-[#03071233] border-dashed border-[1px] border-t-0 border-r-0 border-l-0 py-[23.5px]">
@@ -254,23 +266,29 @@
             </div>
             <div class="flex flex-row justify-between w-full mt-[24.5px]">
               <div class="bg-[#0307120d] rounded-xl">
-                <h3 class="text-[#030712cc] text-base font-medium font-inter capitalize pt-[19px] pb-[18px] pr-[17px] pl-4">
-                  boarding point - laxmipur
+                <h3 class="text-[#030712cc] text-base font-medium font-inter capitalize pt-[19px] pb-[18px] pr-[17px] pl-4 small:flex small:flex-col small:items-center small:text-center">
+                  <span>boarding point</span>
+                  <span>-</span>
+                  <span>laxmipur</span>
                 </h3>
               </div>
               <div class="bg-[#0307120d] rounded-xl">
-                <h3 class="text-[#030712cc] text-base font-medium font-inter capitalize pt-[19px] pb-[18px] pr-[17px] pl-4">
-                  dropping point - bogura
+                <h3 class="text-[#030712cc] text-base font-medium font-inter capitalize pt-[19px] pb-[18px] pr-[17px] pl-4 small:flex small:flex-col small:items-center small:text-center">
+                  <span>dropping point</span>
+                  <span>-</span>
+                  <span>bogura</span>
                 </h3>
               </div>
               <div class="bg-[#0307120d] rounded-xl">
-                <h3 class="text-[#030712cc] text-base font-medium font-inter capitalize pt-[19px] pb-[18px] pr-[17px] pl-4">
-                  est. time - 11 hour
+                <h3 class="text-[#030712cc] text-base font-medium font-inter capitalize pt-[19px] pb-[18px] pr-[17px] pl-4 small:flex small:flex-col small:items-center small:text-center">
+                  <span>est. time</span>
+                  <span>-</span>
+                  <span>11 hour</span>
                 </h3>
               </div>
             </div>
           </div>
-          <div class="flex flex-col justify-center items-center w-[255px]">
+          <div class="flex flex-col justify-center items-center w-[255px] small:py-[35px]">
             <div class="w-12">
               <img src="./image/fare.png" alt="fare">
             </div>
@@ -288,7 +306,7 @@
         </div>
         <!-- ticketArea-finish -->
         <!-- selectionArea-start -->
-        <div class="w-[1171px] mx-auto mt-[26.19px] relative bg-white">
+        <div class="w-[1171px] mx-auto mt-[26.19px] relative bg-white small:w-[520.44px]">
           <div class="absolute h-full w-[57%] bg-black/20 top-[260px] left-0 hidden" id="seatAlert">
             <div class="absolute top-[171px] left-[90px] h-full w-full">
               <div class="h-[300px] w-[500px] rounded-xl absolute bg-lime-400 border-white border-2 flex justify-center items-center z-10">
@@ -298,24 +316,24 @@
               </div>
             </div>
           </div>
-          <div class="grid grid-cols-[671px_497px] -z-10">
+          <div class="grid grid-cols-[671px_497px] -z-10 small:grid-cols-1">
             <!-- congratulationMsg-start -->
-            <div class="absolute left-[25%] top-[25%] w-[718px] rounded-xl bg-white z-10 flex flex-col items-center shadow-2xl border hidden" id="congratulation">
+            <div class="absolute left-[25%] top-[25%] w-[718px] rounded-xl bg-white z-10 flex flex-col items-center shadow-2xl border small:w-full small:left-0 small:top-[70%] hidden" id="congratulation">
               <div class="py-16">
                 <img src="./image/success.png" alt="success">
               </div>
               <div class="pb-7">
                 <h2 class="text-[#20AE5C] uppercase font-bold text-2xl">success</h2>
               </div>
-              <div class="text-center w-[561px]">
-                <h3 class="text-[#4a4a4a] text-lg font-extrabold capitalize pb-2">
+              <div class="text-center w-[561px] small:w-[80%]">
+                <h3 class="text-[#4a4a4a] text-lg font-extrabold capitalize pb-2 small:pb-[20px]">
                   We're diligently securing optimal service and deals for your booked bus seats. Thank you for choosing us!
                 </h3>
                 <p class="text-[#7a7a7a] font-semibold text-base">
                   Confirmation email coming soon. Check your inbox!
                 </p>
               </div>
-              <div class="pt-[19px] pb-[55.01px]">
+              <div class="pt-[19px] pb-[55.01px] small:pt-[30px]">
                 <button class="btn btn-ghost flex content-center font-inter text-xl font-semibold text-white bg-[#20AE5C] w-[300px] py-[15px] rounded-xl" id="continueBtn">
                   continue
                 </button>
@@ -350,18 +368,18 @@
                   <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">a</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat small:w-[64px]">
                     a1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     a2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     a3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     a4
                   </div>
                 </div>
@@ -372,18 +390,18 @@
                   <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">b</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat small:w-[64px]">
                     b1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     b2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     b3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     b4
                   </div>
                 </div>
@@ -394,18 +412,18 @@
                   <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">c</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat small:w-[64px]">
                     c1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     c2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     c3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     c4
                   </div>
                 </div>
@@ -416,18 +434,18 @@
                   <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">d</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat small:w-[64px]">
                     d1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     d2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     d3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     d4
                   </div>
                 </div>
@@ -438,18 +456,18 @@
                   <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">e</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat small:w-[64px]">
                     e1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     e2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     e3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     e4
                   </div>
                 </div>
@@ -460,18 +478,18 @@
                   <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">f</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat small:w-[64px]">
                     f1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     f2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     f3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     f4
                   </div>
                 </div>
@@ -482,18 +500,18 @@
                   <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">g</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat small:w-[64px]">
                     g1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     g2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     g3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     g4
                   </div>
                 </div>
@@ -504,18 +522,18 @@
                   <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">h</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat small:w-[64px]">
                     h1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     h2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     h3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     h4
                   </div>
                 </div>
@@ -526,18 +544,18 @@
                   <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">i</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat small:w-[64px]">
                     i1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat ">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     i2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat small:w-[64px] small:w-[64px]">
                     i3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     i4
                   </div>
                 </div>
@@ -548,18 +566,18 @@
                   <h3 class="uppercase text-[#03071280] font-inter font-medium text-lg">j</h3>
                 </div>
                 <div class="flex flex-row ml-[26px]">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter mr-8 selectedSeat small:w-[64px]">
                     j1
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     j2
                   </div>
                 </div>
                 <div class="flex flex-row ml-auto">
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] mr-8 text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     j3
                   </div>
-                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat">
+                  <div class="w-[110px] bg-[#F7F8F8] py-[17px] rounded-xl flex justify-center items-center uppercase text-[#03071280] text-lg font-medium font-inter selectedSeat small:w-[64px]">
                     j4
                   </div>
                 </div>
@@ -647,15 +665,15 @@
     <!-- mainArea-finish -->
     <!-- footerArea-start -->
     <footer class="mt-[120px] bg-[#030712] text-white">
-      <section class="w-[1171px] mx-auto pt-[120px] border border-b-[#ffffff4d] broder-2 border-dashed border-t-0 border-l-0 border-r-0 pb-12">
+      <section class="w-[1171px] mx-auto pt-[120px] border border-b-[#ffffff4d] broder-2 border-dashed border-t-0 border-l-0 border-r-0 pb-12 small:w-[520.44px]">
         <div class="flex flex-row justify-between">
-          <div>
-            <h2 class="capitalize text-[36px] font-extrabold leading-[42px] text-white">p-ticket</h2>
-            <p class="text-lg text-[#ffffffcc] font-normal font-inter text-white capitalize w-[374px] mt-4">
+          <div class="small:text-center">
+            <h2 class="capitalize text-[36px] font-extrabold leading-[42px] text-white small:text-[26px]">p-ticket</h2>
+            <p class="text-lg text-[#ffffffcc] font-normal font-inter text-white capitalize w-[374px] mt-4 small:w-[280px] small:text-[14px]">
               Seamless, convenient, and secure: Purchase tickets online for hassle-free travel.
             </p>
           </div>
-          <div>
+          <div class="small:text-center">
             <h2 class="text-xl font-semibold capitalize text-white">download our app</h2>
             <div class="flex flex-row items-center mt-4 border rounded-xl border-white">
               <div class="w-[32.09px] pt-[10px] pl-[14.1px]">
@@ -669,14 +687,14 @@
           </div>
         </div>
       </section>
-      <section class="w-[1171px] mx-auto pb-[120px] mt-[31.25px]">
-        <div class="grid grid-cols-2 gap-x-[250px]">
+      <section class="w-[1171px] mx-auto pb-[120px] mt-[31.25px] small:w-[520.44px]">
+        <div class="grid grid-cols-2 gap-x-[250px] small:gap-y-[50px] small:grid-cols-1">
           <div>
-            <p class="text-[#ffffffcc] font-inter text-base font-normal capitalize">
+            <p class="text-[#ffffffcc] font-inter text-base font-normal capitalize small:text-center">
               @all rights reserved, p-ticket services limited.2024
             </p>
           </div>
-          <div class="flex flex-row justify-between w-full">
+          <div class="flex flex-row justify-between w-full small:text-center">
             <p class="text-base font-medium capitalize font-inter">
               terms & condition
             </p>

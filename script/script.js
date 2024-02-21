@@ -86,11 +86,20 @@ couponBtn.addEventListener('click',(event)=>{
             offerValue.value ='';
         },2000)
     }
+
+    for(let repeat of selectedSeat){
+        repeat.classList.add('opacity-30');
+        repeat.setAttribute('disabled','');
+        repeat.removeEventListener('click',seatSelection)
+    }
 })
 
 for(let repeat of selectedSeat){
-    repeat.addEventListener('click',(event)=>{
-        const tableRow = document.createElement('tr');
+    repeat.addEventListener('click',seatSelection)
+}
+
+function seatSelection(event){
+    const tableRow = document.createElement('tr');
         const takeSeat = event.srcElement.innerText;
         const selectedBtn = event.srcElement.classList;
 
@@ -120,7 +129,6 @@ for(let repeat of selectedSeat){
 
         limitedSeat(seatArray,selectedBtn)
         totalSeatPrice();
-    })
 }
 
 function limitedSeat(confirmation,event){
