@@ -16,6 +16,8 @@ const customerPhn = document.getElementById('customerPhn');
 const customerMail= document.getElementById('customerMail');
 const totalSeat = Number(document.getElementById('remainSeat').innerText);
 const nextBtn = document.getElementById('nextBtn');
+const congratulation = document.getElementById('congratulation');
+const continueBtn = document.getElementById('continueBtn');
 
 customerInfo.addEventListener('change',(event)=>{
     let [name,phone,mail] = "not match";
@@ -53,7 +55,12 @@ customerInfo.addEventListener('change',(event)=>{
 })
 
 nextBtn.addEventListener('click',(event)=>{
-    console.log(event);
+    congratulation.classList.remove('hidden');
+})
+
+continueBtn.addEventListener('click',(event)=>{
+    event.srcElement.offsetParent.classList.add('hidden');
+    location.reload();
 })
 
 couponBtn.addEventListener('click',(event)=>{
