@@ -18,6 +18,7 @@ const totalSeat = Number(document.getElementById('remainSeat').innerText);
 const nextBtn = document.getElementById('nextBtn');
 const congratulation = document.getElementById('congratulation');
 const continueBtn = document.getElementById('continueBtn');
+const seatCount = document.getElementById('seatCount');
 
 customerInfo.addEventListener('change',(event)=>{
     let [name,phone,mail] = "not match";
@@ -171,6 +172,7 @@ function totalSeatPrice(){
         seatTable.removeChild(seatTable.lastChild)
     }else{
         totalPrice.innerText = perPrice * totalTicket;
+        seatCount.innerText = totalTicket;
     }
 
     if(seatTable.children.length >= 4){
