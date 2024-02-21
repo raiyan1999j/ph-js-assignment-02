@@ -1,8 +1,49 @@
 let seatArray = [];
-let supportArr= [];
 const selectedSeat = document.getElementsByClassName('selectedSeat');
 const seatTable = document.getElementById('seatTable').children[1];
+const ticketPrice= document.getElementById('ticketPrice');
+const totalPrice = document.getElementById('totalPrice');
+const couponBtn = document.getElementById('couponBtn');
+const singleOffer = document.getElementById('singleOffer');
+const singleOffCode=document.getElementById('singleOffCode');
+const coupleOffer = document.getElementById('coupleOffer');
+const coupleOffCode= document.getElementById('coupleOffCode');
+const grandSection = document.getElementById('grandSection');
+const grandTotal = document.getElementById('grandTotal');
+const customerInfo = document.getElementById('customerInfo');
+const customerName = document.getElementById('customerName');
+const customerPhn = document.getElementById('customerPhn');
+const customerMail= document.getElementById('customerMail');
 const totalSeat = Number(document.getElementById('remainSeat').innerText);
+
+customerInfo.addEventListener('click',(event)=>{
+    console.dir(event);
+})
+
+couponBtn.addEventListener('click',(event)=>{
+    const offerValue = document.getElementById('inputValue');
+    const hideBtn =()=> event.srcElement.offsetParent.offsetParent.classList.add('hidden');
+    let percentage ="";
+
+    if(offerValue.value == singleOffCode.innerText.toLowerCase()){
+        percentage = Number(singleOffer.innerText.match(/\d+/g));
+        hideBtn();
+        grandTotalPrice(percentage);
+    }else if(offerValue.value == coupleOffCode.innerText.toLowerCase()){
+        percentage = Number(coupleOffer.innerText.match(/\d+/g));
+        hideBtn();
+        grandTotalPrice(percentage);
+    }else{
+        percentage = 'please input valid coupon!';
+        offerValue.classList.add('text-red-500','font-medium');
+        offerValue.value = percentage;
+        
+        setTimeout(()=>{
+            offerValue.classList.remove('text-red-500','font-medium');
+            offerValue.value ='';
+        },2000)
+    }
+})
 
 for(let repeat of selectedSeat){
     repeat.addEventListener('click',(event)=>{
@@ -13,7 +54,7 @@ for(let repeat of selectedSeat){
         tableRow.classList.add('text-base','font-normal','font-inter','text-[#03071299]','capitalize','border-none');
 
         tableRow.setAttribute('id',takeSeat);
-        tableRow.innerHTML = `<td>${takeSeat}</td> <td>Economy</td> <td>550</td>`;
+        tableRow.innerHTML = `<td>${takeSeat}</td> <td>Economy</td> <td>${ticketPrice.innerText}</td>`;
 
         if(!seatArray.includes(takeSeat)){
             seatArray.push(takeSeat)
@@ -72,7 +113,30 @@ function toggleSelection(event,option,value){
 }
 
 function totalSeatPrice(){
+    const totalTicket = seatTable.children.length;
+    const perPrice = Number(ticketPrice.innerText.match(/\d+/g));
+
     if(seatTable.children.length > 4){
         seatTable.removeChild(seatTable.lastChild)
+    }else{
+        totalPrice.innerText = perPrice * totalTicket;
     }
+
+    if(seatTable.children.length >= 4){
+        couponBtn.classList.remove('opacity-30','hover:cursor-not-allowed');
+        couponBtn.classList.add('hover:cursor-pointer');
+        couponBtn.removeAttribute('disabled');
+    }else{
+        couponBtn.classList.add('opacity-30','hover:cursor-not-allowed');
+        couponBtn.setAttribute('disabled','');
+    }
+}
+
+function grandTotalPrice(discountPrice){
+    const perPrice = Number(ticketPrice.innerText.match(/\d+/g));
+    const discount = perPrice * discountPrice / 100;
+    const afterDiscount = perPrice - discount;
+    
+    grandSection.classList.remove('hidden');
+    grandTotal.innerText = afterDiscount * 4
 }

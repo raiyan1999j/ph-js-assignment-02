@@ -154,7 +154,7 @@
             <div class="w-[573px] flex flex-row bg-[#FFBF0F] py-[52px] rounded-xl">
               <div class="w-[343px] relative pl-[51px] before:absolute before:h-[50px] before:w-[50px] before:bg-white before:rounded-full before:right-[-22px] before:top-[-78%] after:absolute after:h-[50px] after:w-[50px] after:bg-white after:rounded-full after:right-[-22px] after:bottom-[-78px]">
                 <div class="absolute h-[126px] w-[1px] border-dashed border-white border-[1px] top-[-15px] right-0"></div>
-                <h2 class="text-4xl font-black leading-[36px] text-[#030712cc] font-inter uppercase">
+                <h2 class="text-4xl font-black leading-[36px] text-[#030712cc] font-inter uppercase" id="singleOffer">
                   15% off
                 </h2>
                 <h3 class="text-lg font-medium text-[#030712cc] font-inter leading-[36px]">
@@ -165,14 +165,14 @@
                 </p>
               </div>
               <div class="w-[229px] pl-[49px]">
-                <h2 class="font-raleway font-semibold text-[#030712] text-4xl uppercase">new 15</h2>
+                <h2 class="font-raleway font-semibold text-[#030712] text-4xl uppercase" id="singleOffCode">new 15</h2>
                 <p class="text-[#03071266] font-medium capitalize mt-3">coupon code</p>
               </div>
             </div>
             <div class="w-[573px] flex flex-row bg-[#F78C9C] py-[52px] rounded-xl">
               <div class="w-[343px] relative pl-[51px] before:absolute before:h-[50px] before:w-[50px] before:bg-white before:rounded-full before:right-[-22px] before:top-[-78%] after:absolute after:h-[50px] after:w-[50px] after:bg-white after:rounded-full after:right-[-22px] after:bottom-[-78px]">
                 <div class="absolute h-[126px] w-[1px] border-dashed border-white border-[1px] top-[-15px] right-0"></div>
-                <h2 class="text-4xl font-black leading-[36px] text-[#030712cc] font-inter uppercase">
+                <h2 class="text-4xl font-black leading-[36px] text-[#030712cc] font-inter uppercase" id="coupleOffer">
                   20% off
                 </h2>
                 <h3 class="text-lg font-medium text-[#030712cc] font-inter leading-[36px]">
@@ -183,7 +183,7 @@
                 </p>
               </div>
               <div class="w-[229px] pl-[43px]">
-                <h2 class="font-inter font-black text-[#030712] text-3xl capitalize">couple 20</h2>
+                <h2 class="font-inter font-black text-[#030712] text-3xl capitalize" id="coupleOffCode">couple 20</h2>
                 <p class="text-[#03071266] font-medium capitalize mt-3">coupon code</p>
               </div>
             </div>
@@ -275,7 +275,7 @@
               <img src="./image/fare.png" alt="fare">
             </div>
             <div>
-              <h3 class="text-[32px] font-bold text-[#030712] capitalize">
+              <h3 class="text-[32px] font-bold text-[#030712] capitalize" id="ticketPrice">
                 550 taka
               </h3>
             </div>
@@ -563,7 +563,9 @@
                     <tfoot>
                       <tr class="text-[#030712] text-base font-medium font-inter capitalize">
                         <td colspan="2" >total</td>
-                        <td>BDT 550</td>
+                        <td>BDT
+                          <span id="totalPrice">0</span>
+                        </td>
                       </tr>
                     </tfoot>
                   </table>
@@ -571,32 +573,32 @@
               </div>
               <div class="relative h-[56px] w-[369px] mt-4">
                 <div class="absolute h-full w-full left-0 rounded-xl">
-                  <input type="text" placeholder="Have you any coupon?" class="h-full w-full placeholder:font-inter placeholder:text-sm placeholder:font-normal placeholder:pl-[22px] placeholder:pt-5">
+                  <input type="text" placeholder="Have you any coupon?" class="h-full w-full pl-[22px] placeholder:font-inter placeholder:text-sm placeholder:font-normal placeholder:pl-[22px] placeholder:pt-5" id="inputValue">
                 </div>
                 <div class="absolute right-0 top-[5px]">
-                  <button class="font-inter text-base font-semibold text-white capitalize pt-[11px] pr-[17px] pb-[10px] pl-[18px] bg-[#1DD100] rounded-xl">apply</button>
+                  <button class="font-inter text-base font-semibold text-white capitalize pt-[11px] pr-[17px] pb-[10px] pl-[18px] bg-[#1DD100] rounded-xl opacity-30 hover:cursor-not-allowed" id="couponBtn" disabled>apply</button>
                 </div>
               </div>
-              <div class="flex flex-row w-full justify-between mt-6">
+              <div class="flex flex-row w-full justify-between mt-6 hidden" id="grandSection">
                 <div>
                   <h3 class="font-inter text-base font-medium text-[#030712] capitalize">grand total</h3>
                 </div>
                 <div class="pr-[65px]">
-                  <h3 class="font-inter text-base font-medium text-[#030712] uppercase">bdt 550</h3>
+                  <h3 class="font-inter text-base font-medium text-[#030712] uppercase" id="grandTotal"></h3>
                 </div>
               </div>
-              <div class="mt-6">
+              <div class="mt-6" id="customerInfo">
                 <div class="mb-6">
                   <h3 class="text-[#030712] capitalize text-base font-semibold font-inter">passenger name</h3>
-                  <input type="text" placeholder="enter your name" class="h-16 w-[433px] mt-4 rounded-xl border placeholder:text-[#03071266] placeholder:text-base placeholder:font-normal placeholder:pl-6 placeholder:py-[23px] placeholder:font-inter placeholder:capitalize">
+                  <input type="text" placeholder="enter your name" class="h-16 w-[433px] mt-4 rounded-xl border placeholder:text-[#03071266] placeholder:text-base placeholder:font-normal placeholder:pl-6 placeholder:py-[23px] placeholder:font-inter placeholder:capitalize" id="customerName">
                 </div>
                 <div class="mb-6">
                   <h3 class="text-[#030712] capitalize text-base font-semibold font-inter">phone number</h3>
-                  <input type="text" placeholder="enter your phone number" class="h-16 w-[433px] mt-4 rounded-xl border placeholder:text-[#03071266] placeholder:text-base placeholder:font-normal placeholder:pl-6 placeholder:py-[23px] placeholder:font-inter placeholder:capitalize">
+                  <input type="text" placeholder="enter your phone number" class="h-16 w-[433px] mt-4 rounded-xl border placeholder:text-[#03071266] placeholder:text-base placeholder:font-normal placeholder:pl-6 placeholder:py-[23px] placeholder:font-inter placeholder:capitalize" id="customerPhn">
                 </div>
                 <div class="mb-6">
                   <h3 class="text-[#030712] capitalize text-base font-semibold font-inter">email</h3>
-                  <input type="email" placeholder="enter your email id" class="h-16 w-[433px] mt-4 rounded-xl border placeholder:text-[#03071266] placeholder:text-base placeholder:font-normal placeholder:pl-6 placeholder:py-[23px] placeholder:font-inter placeholder:capitalize">
+                  <input type="email" placeholder="enter your email id" class="h-16 w-[433px] mt-4 rounded-xl border placeholder:text-[#03071266] placeholder:text-base placeholder:font-normal placeholder:pl-6 placeholder:py-[23px] placeholder:font-inter placeholder:capitalize" id="customerMail">
                 </div>
                 <div class="mb-6">
                   <button class="text-xl font-extrabold text-white capitalize w-[433px] py-[21px] bg-[#1DD100] rounded-xl ">
