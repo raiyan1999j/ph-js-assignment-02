@@ -70,11 +70,11 @@ couponBtn.addEventListener('click',(event)=>{
     const hideBtn =()=> event.srcElement.offsetParent.offsetParent.classList.add('hidden');
     let percentage ="";
 
-    if(offerValue.value == singleOffCode.innerText.toLowerCase()){
+    if(offerValue.value.toLowerCase() == singleOffCode.innerText.toLowerCase()){
         percentage = Number(singleOffer.innerText.match(/\d+/g));
         hideBtn();
         grandTotalPrice(percentage);
-    }else if(offerValue.value == coupleOffCode.innerText.toLowerCase()){
+    }else if(offerValue.value.toLowerCase() == coupleOffCode.innerText.toLowerCase()){
         percentage = Number(coupleOffer.innerText.match(/\d+/g));
         hideBtn();
         grandTotalPrice(percentage);
